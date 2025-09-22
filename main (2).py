@@ -19,6 +19,8 @@ from seoul import Client
 from webdriver import keep_alive
 from googleapiclient.discovery import build
 
+TOKEN = os.getenv('DISCORD_BOT_TOKEN')
+
 man = '🀇'
 man2 = '🀈'
 man3 = '🀉'
@@ -1369,4 +1371,4 @@ async def join(ctx):
     channel = ctx.message.author.voice.channel
     voice_client = await channel.connect()
 
-app.run('')
+app.run('TOKEN')
